@@ -16,6 +16,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let paesiEuropa : [String] = ["Italia", "Germania"]
     let paesiAisa : [String] = ["Cina"]
     let paesiAfirca :[String] = ["Marocco"]
+    let paesiAmerica : [String] = ["Stati Uniti", "Canada"]
+    let paesiOceania : [String] = ["Australia"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var listaStati :[String]
         switch indexPath.section {
         case 0 :
-            print("hello")
-            
+            listaStati = paesiEuropa
         default:
             <#code#>
         }
