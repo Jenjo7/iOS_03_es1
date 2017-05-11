@@ -8,9 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tvw_states: UITableView!
+    
+    let continenti : [String] = ["Afirca", "America", "Europa", "Asia", "Oceania"]
+    let paesiEuropa : [String] = ["Italia", "Germania"]
+    let paesiAisa : [String] = ["Cina"]
+    let paesiAfirca :[String] = ["Marocco"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,21 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var listaStati :[String]
+        switch indexPath.section {
+        case 0 :
+            print("hello")
+            
+        default:
+            <#code#>
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }
 
